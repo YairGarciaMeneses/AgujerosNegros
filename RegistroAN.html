@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../../Downloads/Proyecto JS 2do/form.js"></script>
+<title>Registro</title>
+</head>
+<style type="text/css">
+
+form {
+	width: 300px;
+	margin: auto;
+}
+label {
+	width: 200px;
+	display: block;
+	margin: 10px;
+	float: left;
+}
+ input[type=text], select {
+	 width: 200px;
+	 float: left;
+ }
+ button {
+	 display: block;
+	 clear: both;
+	 margin-left: 200px;
+ }
+ ul {
+	 list-style: none;
+	 margin: 0px;
+ }
+ li {
+	 margin: 0px;
+	 padding: 0px;
+	 height: 80px;
+ }
+ 
+ .enfoco {
+	 background-color: #9F9;
+	 border: 1px solid green;
+ }
+ .ayuda {
+	 font-size: xx-small;
+	 color: green;
+ }
+ input.error {
+	 background-color: #FF9;
+	 border: 1px solid red;
+ }
+	 
+ </style>
+ <style type="text/css">
+#apDiv1 {
+	position: absolute;
+	width: 374px;
+	height: 282px;
+	z-index: 1;
+	left: 232px;
+	top: 50px;
+	background-color: red;
+	display: none;
+}
+</style>
+ 
+	 
+</head>
+
+<body>
+<form onsubmit="return validar();">
+<ul>
+
+<li>
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this);revisarObligatorio(this); revisarLongitud(this, 2)"/>
+</li>
+<li>
+<label for="direccion">Direccion</label>
+<input type="text" id="direccion" name="direcciom" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this);revisarObligatorio(this); revisarLongitud(this, 8)"/>
+</li>
+<li>
+<label for="edad">Edad</label>
+<input type="text" id="edad" name="edad" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarNumerico(this)"/>
+</li>
+<li>
+<label for="email">E-mail</label>
+<input type="text" id="email" name="email" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarEmail(this)"/>
+</li>
+<li>
+<label for="estadocivil">Estado Civil</label>
+<select id="estadocivil" name="estadocivil">
+        <option value="">Seleccione</option>
+        <option>Soltero/a</option>
+        <option>Casado/a></option>
+        <option>Viudo/a</option>
+        <option>Divorciado/a</option>
+</select>
+</li>
+<li>
+<label>       
+<input type="checkbox" value="SI"/>
+Acepto las condiciones
+</label>
+</li>
+</ul>
+
+<button>Registrarme</button>
+<p>Por Favor imprimir esta pagina como comprobante</p>
+</form>
+
+</body>
+</html>
+<body>
+<a href="javascript:window.print()">Imprimir</a>
+<br />
+
+
+
+</body>
+</html>
